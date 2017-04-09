@@ -9,10 +9,49 @@
 /* Begin PBXBuildFile section */
 		39EA82671E98F7E9007C0238 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82661E98F7E9007C0238 /* main.m */; };
 		39EA826A1E98F7E9007C0238 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82691E98F7E9007C0238 /* AppDelegate.m */; };
-		39EA826D1E98F7E9007C0238 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA826C1E98F7E9007C0238 /* ViewController.m */; };
-		39EA82701E98F7E9007C0238 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39EA826E1E98F7E9007C0238 /* Main.storyboard */; };
 		39EA82721E98F7E9007C0238 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39EA82711E98F7E9007C0238 /* Assets.xcassets */; };
 		39EA82751E98F7E9007C0238 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39EA82731E98F7E9007C0238 /* LaunchScreen.storyboard */; };
+		39EA82801E98F803007C0238 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA827D1E98F803007C0238 /* libopencore-amrnb.a */; };
+		39EA82811E98F803007C0238 /* RCConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39EA827E1E98F803007C0238 /* RCConfig.plist */; };
+		39EA82821E98F803007C0238 /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA827F1E98F803007C0238 /* RongIMLib.framework */; };
+		39EA829D1E98F82C007C0238 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82851E98F82C007C0238 /* MASCompositeConstraint.m */; };
+		39EA829E1E98F82C007C0238 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82881E98F82C007C0238 /* MASConstraint.m */; };
+		39EA829F1E98F82C007C0238 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA828A1E98F82C007C0238 /* MASConstraintMaker.m */; };
+		39EA82A01E98F82C007C0238 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA828C1E98F82C007C0238 /* MASLayoutConstraint.m */; };
+		39EA82A11E98F82C007C0238 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82901E98F82C007C0238 /* MASViewAttribute.m */; };
+		39EA82A21E98F82C007C0238 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82921E98F82C007C0238 /* MASViewConstraint.m */; };
+		39EA82A31E98F82C007C0238 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82941E98F82C007C0238 /* NSArray+MASAdditions.m */; };
+		39EA82A41E98F82C007C0238 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82971E98F82C007C0238 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		39EA82A51E98F82C007C0238 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82991E98F82C007C0238 /* View+MASAdditions.m */; };
+		39EA82A61E98F82C007C0238 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA829C1E98F82C007C0238 /* ViewController+MASAdditions.m */; };
+		39EA82A91E98FA83007C0238 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82A81E98FA83007C0238 /* AssetsLibrary.framework */; };
+		39EA82AB1E98FA89007C0238 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82AA1E98FA89007C0238 /* AudioToolbox.framework */; };
+		39EA82AD1E98FA8F007C0238 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82AC1E98FA8F007C0238 /* AVFoundation.framework */; };
+		39EA82AF1E98FA94007C0238 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82AE1E98FA94007C0238 /* CFNetwork.framework */; };
+		39EA82B61E98FAB2007C0238 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82B01E98FAB2007C0238 /* CoreAudio.framework */; };
+		39EA82B71E98FAB2007C0238 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82B11E98FAB2007C0238 /* CoreGraphics.framework */; };
+		39EA82B81E98FAB2007C0238 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82B21E98FAB2007C0238 /* CoreLocation.framework */; };
+		39EA82B91E98FAB2007C0238 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82B31E98FAB2007C0238 /* CoreMedia.framework */; };
+		39EA82BA1E98FAB2007C0238 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82B41E98FAB2007C0238 /* CoreTelephony.framework */; };
+		39EA82BB1E98FAB2007C0238 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82B51E98FAB2007C0238 /* CoreVideo.framework */; };
+		39EA82BD1E98FABD007C0238 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82BC1E98FABD007C0238 /* ImageIO.framework */; };
+		39EA82C01E98FAD9007C0238 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82BE1E98FAD9007C0238 /* libc++.tbd */; };
+		39EA82C11E98FAD9007C0238 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82BF1E98FAD9007C0238 /* libc++abi.tbd */; };
+		39EA82C61E98FB05007C0238 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82C21E98FB05007C0238 /* libsqlite3.tbd */; };
+		39EA82C71E98FB05007C0238 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82C31E98FB05007C0238 /* libstdc++.tbd */; };
+		39EA82C81E98FB05007C0238 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82C41E98FB05007C0238 /* libxml2.tbd */; };
+		39EA82C91E98FB05007C0238 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82C51E98FB05007C0238 /* libz.tbd */; };
+		39EA82CB1E98FB0C007C0238 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82CA1E98FB0C007C0238 /* MapKit.framework */; };
+		39EA82CD1E98FB13007C0238 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82CC1E98FB13007C0238 /* OpenGLES.framework */; };
+		39EA82CF1E98FB1C007C0238 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82CE1E98FB1C007C0238 /* QuartzCore.framework */; };
+		39EA82D11E98FB25007C0238 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82D01E98FB25007C0238 /* SystemConfiguration.framework */; };
+		39EA82D31E98FB2C007C0238 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82D21E98FB2C007C0238 /* UIKit.framework */; };
+		39EA82D51E98FB34007C0238 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82D41E98FB34007C0238 /* Photos.framework */; };
+		39EA82D71E98FB3A007C0238 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA82D61E98FB3A007C0238 /* SafariServices.framework */; };
+		39EA82DB1E990EF0007C0238 /* ChatListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82DA1E990EF0007C0238 /* ChatListController.m */; };
+		39EA82DE1E990F00007C0238 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82DD1E990F00007C0238 /* ChatViewController.m */; };
+		39EA82E11E9914F4007C0238 /* ChatListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82E01E9914F4007C0238 /* ChatListCell.m */; };
+		39EA82E41E99D842007C0238 /* ChatViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82E31E99D842007C0238 /* ChatViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +59,69 @@
 		39EA82661E98F7E9007C0238 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39EA82681E98F7E9007C0238 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		39EA82691E98F7E9007C0238 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		39EA826B1E98F7E9007C0238 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		39EA826C1E98F7E9007C0238 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		39EA826F1E98F7E9007C0238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39EA82711E98F7E9007C0238 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39EA82741E98F7E9007C0238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39EA82761E98F7E9007C0238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39EA827D1E98F803007C0238 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		39EA827E1E98F803007C0238 /* RCConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RCConfig.plist; sourceTree = "<group>"; };
+		39EA827F1E98F803007C0238 /* RongIMLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMLib.framework; sourceTree = "<group>"; };
+		39EA82841E98F82C007C0238 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		39EA82851E98F82C007C0238 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		39EA82861E98F82C007C0238 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		39EA82871E98F82C007C0238 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		39EA82881E98F82C007C0238 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		39EA82891E98F82C007C0238 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		39EA828A1E98F82C007C0238 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		39EA828B1E98F82C007C0238 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		39EA828C1E98F82C007C0238 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		39EA828D1E98F82C007C0238 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		39EA828E1E98F82C007C0238 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		39EA828F1E98F82C007C0238 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		39EA82901E98F82C007C0238 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		39EA82911E98F82C007C0238 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		39EA82921E98F82C007C0238 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		39EA82931E98F82C007C0238 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		39EA82941E98F82C007C0238 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		39EA82951E98F82C007C0238 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		39EA82961E98F82C007C0238 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		39EA82971E98F82C007C0238 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		39EA82981E98F82C007C0238 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		39EA82991E98F82C007C0238 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		39EA829A1E98F82C007C0238 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		39EA829B1E98F82C007C0238 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		39EA829C1E98F82C007C0238 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		39EA82A81E98FA83007C0238 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		39EA82AA1E98FA89007C0238 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		39EA82AC1E98FA8F007C0238 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		39EA82AE1E98FA94007C0238 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		39EA82B01E98FAB2007C0238 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		39EA82B11E98FAB2007C0238 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		39EA82B21E98FAB2007C0238 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		39EA82B31E98FAB2007C0238 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		39EA82B41E98FAB2007C0238 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		39EA82B51E98FAB2007C0238 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		39EA82BC1E98FABD007C0238 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		39EA82BE1E98FAD9007C0238 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		39EA82BF1E98FAD9007C0238 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		39EA82C21E98FB05007C0238 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		39EA82C31E98FB05007C0238 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		39EA82C41E98FB05007C0238 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		39EA82C51E98FB05007C0238 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		39EA82CA1E98FB0C007C0238 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		39EA82CC1E98FB13007C0238 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		39EA82CE1E98FB1C007C0238 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		39EA82D01E98FB25007C0238 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		39EA82D21E98FB2C007C0238 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		39EA82D41E98FB34007C0238 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		39EA82D61E98FB3A007C0238 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		39EA82D91E990EF0007C0238 /* ChatListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListController.h; sourceTree = "<group>"; };
+		39EA82DA1E990EF0007C0238 /* ChatListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListController.m; sourceTree = "<group>"; };
+		39EA82DC1E990F00007C0238 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		39EA82DD1E990F00007C0238 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		39EA82DF1E9914F4007C0238 /* ChatListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListCell.h; sourceTree = "<group>"; };
+		39EA82E01E9914F4007C0238 /* ChatListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListCell.m; sourceTree = "<group>"; };
+		39EA82E21E99D842007C0238 /* ChatViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewCell.h; sourceTree = "<group>"; };
+		39EA82E31E99D842007C0238 /* ChatViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +129,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39EA82D71E98FB3A007C0238 /* SafariServices.framework in Frameworks */,
+				39EA82D51E98FB34007C0238 /* Photos.framework in Frameworks */,
+				39EA82D31E98FB2C007C0238 /* UIKit.framework in Frameworks */,
+				39EA82D11E98FB25007C0238 /* SystemConfiguration.framework in Frameworks */,
+				39EA82CF1E98FB1C007C0238 /* QuartzCore.framework in Frameworks */,
+				39EA82CD1E98FB13007C0238 /* OpenGLES.framework in Frameworks */,
+				39EA82CB1E98FB0C007C0238 /* MapKit.framework in Frameworks */,
+				39EA82C61E98FB05007C0238 /* libsqlite3.tbd in Frameworks */,
+				39EA82C71E98FB05007C0238 /* libstdc++.tbd in Frameworks */,
+				39EA82C81E98FB05007C0238 /* libxml2.tbd in Frameworks */,
+				39EA82C91E98FB05007C0238 /* libz.tbd in Frameworks */,
+				39EA82C01E98FAD9007C0238 /* libc++.tbd in Frameworks */,
+				39EA82C11E98FAD9007C0238 /* libc++abi.tbd in Frameworks */,
+				39EA82BD1E98FABD007C0238 /* ImageIO.framework in Frameworks */,
+				39EA82B61E98FAB2007C0238 /* CoreAudio.framework in Frameworks */,
+				39EA82B71E98FAB2007C0238 /* CoreGraphics.framework in Frameworks */,
+				39EA82B81E98FAB2007C0238 /* CoreLocation.framework in Frameworks */,
+				39EA82B91E98FAB2007C0238 /* CoreMedia.framework in Frameworks */,
+				39EA82BA1E98FAB2007C0238 /* CoreTelephony.framework in Frameworks */,
+				39EA82BB1E98FAB2007C0238 /* CoreVideo.framework in Frameworks */,
+				39EA82AF1E98FA94007C0238 /* CFNetwork.framework in Frameworks */,
+				39EA82AD1E98FA8F007C0238 /* AVFoundation.framework in Frameworks */,
+				39EA82AB1E98FA89007C0238 /* AudioToolbox.framework in Frameworks */,
+				39EA82A91E98FA83007C0238 /* AssetsLibrary.framework in Frameworks */,
+				39EA82821E98F803007C0238 /* RongIMLib.framework in Frameworks */,
+				39EA82801E98F803007C0238 /* libopencore-amrnb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +164,7 @@
 		39EA82591E98F7E9007C0238 = {
 			isa = PBXGroup;
 			children = (
+				39EA82D81E990DED007C0238 /* Framework */,
 				39EA82641E98F7E9007C0238 /* myTalk */,
 				39EA82631E98F7E9007C0238 /* Products */,
 			);
@@ -58,11 +181,11 @@
 		39EA82641E98F7E9007C0238 /* myTalk */ = {
 			isa = PBXGroup;
 			children = (
+				39EA82A71E98F841007C0238 /* Classes */,
+				39EA82831E98F82C007C0238 /* Masonry */,
+				39EA827C1E98F803007C0238 /* IMLib */,
 				39EA82681E98F7E9007C0238 /* AppDelegate.h */,
 				39EA82691E98F7E9007C0238 /* AppDelegate.m */,
-				39EA826B1E98F7E9007C0238 /* ViewController.h */,
-				39EA826C1E98F7E9007C0238 /* ViewController.m */,
-				39EA826E1E98F7E9007C0238 /* Main.storyboard */,
 				39EA82711E98F7E9007C0238 /* Assets.xcassets */,
 				39EA82731E98F7E9007C0238 /* LaunchScreen.storyboard */,
 				39EA82761E98F7E9007C0238 /* Info.plist */,
@@ -77,6 +200,94 @@
 				39EA82661E98F7E9007C0238 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		39EA827C1E98F803007C0238 /* IMLib */ = {
+			isa = PBXGroup;
+			children = (
+				39EA827D1E98F803007C0238 /* libopencore-amrnb.a */,
+				39EA827E1E98F803007C0238 /* RCConfig.plist */,
+				39EA827F1E98F803007C0238 /* RongIMLib.framework */,
+			);
+			path = IMLib;
+			sourceTree = "<group>";
+		};
+		39EA82831E98F82C007C0238 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				39EA82841E98F82C007C0238 /* MASCompositeConstraint.h */,
+				39EA82851E98F82C007C0238 /* MASCompositeConstraint.m */,
+				39EA82861E98F82C007C0238 /* MASConstraint+Private.h */,
+				39EA82871E98F82C007C0238 /* MASConstraint.h */,
+				39EA82881E98F82C007C0238 /* MASConstraint.m */,
+				39EA82891E98F82C007C0238 /* MASConstraintMaker.h */,
+				39EA828A1E98F82C007C0238 /* MASConstraintMaker.m */,
+				39EA828B1E98F82C007C0238 /* MASLayoutConstraint.h */,
+				39EA828C1E98F82C007C0238 /* MASLayoutConstraint.m */,
+				39EA828D1E98F82C007C0238 /* Masonry.h */,
+				39EA828E1E98F82C007C0238 /* MASUtilities.h */,
+				39EA828F1E98F82C007C0238 /* MASViewAttribute.h */,
+				39EA82901E98F82C007C0238 /* MASViewAttribute.m */,
+				39EA82911E98F82C007C0238 /* MASViewConstraint.h */,
+				39EA82921E98F82C007C0238 /* MASViewConstraint.m */,
+				39EA82931E98F82C007C0238 /* NSArray+MASAdditions.h */,
+				39EA82941E98F82C007C0238 /* NSArray+MASAdditions.m */,
+				39EA82951E98F82C007C0238 /* NSArray+MASShorthandAdditions.h */,
+				39EA82961E98F82C007C0238 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				39EA82971E98F82C007C0238 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				39EA82981E98F82C007C0238 /* View+MASAdditions.h */,
+				39EA82991E98F82C007C0238 /* View+MASAdditions.m */,
+				39EA829A1E98F82C007C0238 /* View+MASShorthandAdditions.h */,
+				39EA829B1E98F82C007C0238 /* ViewController+MASAdditions.h */,
+				39EA829C1E98F82C007C0238 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		39EA82A71E98F841007C0238 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				39EA82D91E990EF0007C0238 /* ChatListController.h */,
+				39EA82DA1E990EF0007C0238 /* ChatListController.m */,
+				39EA82DC1E990F00007C0238 /* ChatViewController.h */,
+				39EA82DD1E990F00007C0238 /* ChatViewController.m */,
+				39EA82DF1E9914F4007C0238 /* ChatListCell.h */,
+				39EA82E01E9914F4007C0238 /* ChatListCell.m */,
+				39EA82E21E99D842007C0238 /* ChatViewCell.h */,
+				39EA82E31E99D842007C0238 /* ChatViewCell.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		39EA82D81E990DED007C0238 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				39EA82D61E98FB3A007C0238 /* SafariServices.framework */,
+				39EA82D41E98FB34007C0238 /* Photos.framework */,
+				39EA82D21E98FB2C007C0238 /* UIKit.framework */,
+				39EA82D01E98FB25007C0238 /* SystemConfiguration.framework */,
+				39EA82CE1E98FB1C007C0238 /* QuartzCore.framework */,
+				39EA82CC1E98FB13007C0238 /* OpenGLES.framework */,
+				39EA82CA1E98FB0C007C0238 /* MapKit.framework */,
+				39EA82C21E98FB05007C0238 /* libsqlite3.tbd */,
+				39EA82C31E98FB05007C0238 /* libstdc++.tbd */,
+				39EA82C41E98FB05007C0238 /* libxml2.tbd */,
+				39EA82C51E98FB05007C0238 /* libz.tbd */,
+				39EA82BE1E98FAD9007C0238 /* libc++.tbd */,
+				39EA82BF1E98FAD9007C0238 /* libc++abi.tbd */,
+				39EA82BC1E98FABD007C0238 /* ImageIO.framework */,
+				39EA82B01E98FAB2007C0238 /* CoreAudio.framework */,
+				39EA82B11E98FAB2007C0238 /* CoreGraphics.framework */,
+				39EA82B21E98FAB2007C0238 /* CoreLocation.framework */,
+				39EA82B31E98FAB2007C0238 /* CoreMedia.framework */,
+				39EA82B41E98FAB2007C0238 /* CoreTelephony.framework */,
+				39EA82B51E98FAB2007C0238 /* CoreVideo.framework */,
+				39EA82AE1E98FA94007C0238 /* CFNetwork.framework */,
+				39EA82AC1E98FA8F007C0238 /* AVFoundation.framework */,
+				39EA82AA1E98FA89007C0238 /* AudioToolbox.framework */,
+				39EA82A81E98FA83007C0238 /* AssetsLibrary.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +349,7 @@
 			files = (
 				39EA82751E98F7E9007C0238 /* LaunchScreen.storyboard in Resources */,
 				39EA82721E98F7E9007C0238 /* Assets.xcassets in Resources */,
-				39EA82701E98F7E9007C0238 /* Main.storyboard in Resources */,
+				39EA82811E98F803007C0238 /* RCConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,23 +360,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39EA826D1E98F7E9007C0238 /* ViewController.m in Sources */,
+				39EA82E11E9914F4007C0238 /* ChatListCell.m in Sources */,
+				39EA82A41E98F82C007C0238 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				39EA82A21E98F82C007C0238 /* MASViewConstraint.m in Sources */,
+				39EA82DE1E990F00007C0238 /* ChatViewController.m in Sources */,
+				39EA82E41E99D842007C0238 /* ChatViewCell.m in Sources */,
+				39EA829D1E98F82C007C0238 /* MASCompositeConstraint.m in Sources */,
+				39EA82A31E98F82C007C0238 /* NSArray+MASAdditions.m in Sources */,
 				39EA826A1E98F7E9007C0238 /* AppDelegate.m in Sources */,
+				39EA82A01E98F82C007C0238 /* MASLayoutConstraint.m in Sources */,
+				39EA82DB1E990EF0007C0238 /* ChatListController.m in Sources */,
 				39EA82671E98F7E9007C0238 /* main.m in Sources */,
+				39EA82A61E98F82C007C0238 /* ViewController+MASAdditions.m in Sources */,
+				39EA82A51E98F82C007C0238 /* View+MASAdditions.m in Sources */,
+				39EA82A11E98F82C007C0238 /* MASViewAttribute.m in Sources */,
+				39EA829E1E98F82C007C0238 /* MASConstraint.m in Sources */,
+				39EA829F1E98F82C007C0238 /* MASConstraintMaker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		39EA826E1E98F7E9007C0238 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				39EA826F1E98F7E9007C0238 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		39EA82731E98F7E9007C0238 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -261,8 +477,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/myTalk/IMLib",
+				);
 				INFOPLIST_FILE = myTalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/myTalk/IMLib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = jam.studio.myTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -272,8 +498,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/myTalk/IMLib",
+				);
 				INFOPLIST_FILE = myTalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/myTalk/IMLib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = jam.studio.myTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -298,6 +534,7 @@
 				39EA827B1E98F7E9007C0238 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

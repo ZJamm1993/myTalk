@@ -8,16 +8,52 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+#define RONG_APP_KEY @"y745wfm8443zv"
+
+@interface AppDelegate ()<RCIMClientReceiveMessageDelegate>
 
 @end
 
 @implementation AppDelegate
 
+/*
+ {"code":200,"userId":"jam","token":"vvEQ0x0yR27wcnRQQFj4MhzW2SeFZ+o7/punDJxCX7yYIzjEZYQJU90QzH6sSb/dM/bUxrHzuMcQmJ6c+Dpfww=="}
+ */
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[RCIMClient sharedRCIMClient]initWithAppKey:RONG_APP_KEY];
+    [[RCIMClient sharedRCIMClient]connectWithToken:@"vvEQ0x0yR27wcnRQQFj4MhzW2SeFZ+o7/punDJxCX7yYIzjEZYQJU90QzH6sSb/dM/bUxrHzuMcQmJ6c+Dpfww==" success:^(NSString *userId) {
+        NSLog(@"connect success, userid:%@",userId);
+    } error:^(RCConnectErrorCode status) {
+        NSLog(@"connect error code:%d",(int)status);
+    } tokenIncorrect:^{
+        NSLog(@"token incorrect");
+    }];
+    [[RCIMClient sharedRCIMClient]setReceiveMessageDelegate:self object:nil];
+    
+    self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    [self.window makeKeyAndVisible];
+    
+    UINavigationController* nav=[[UINavigationController alloc]init];
+    ChatListController* chatlist=[[ChatListController alloc]init];
+    [nav pushViewController:chatlist animated:NO];
+    
+    self.window.rootViewController=nav;
+    
     return YES;
+}
+
+-(void)onReceived:(RCMessage *)message left:(int)nLeft object:(id)object
+{
+    NSMutableDictionary* dic=[NSMutableDictionary dictionary];
+    [dic setValue:message forKey:@"message"];
+    [dic setValue:[NSNumber numberWithInt:nLeft] forKey:@"nLeft"];
+    [dic setValue:object forKey:@"object"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[NSNotificationCenter defaultCenter]postNotificationName:ReceiveNewMessageNotificationKey object:nil userInfo:dic];
+    });
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

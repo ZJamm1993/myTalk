@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RongIMLib/RongIMLib.h>
+#import "ChatListController.h"
+
+#define ReceiveNewMessageNotificationKey @"ReceiveNewMessageNotificationKey"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 
 @end
 
