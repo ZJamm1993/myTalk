@@ -11,6 +11,7 @@
 
 @interface ChatViewCell : UITableViewCell
 
+@property (nonatomic,assign) BOOL isRight;
 @property (nonatomic,strong) RCMessage* message;
 
 @end

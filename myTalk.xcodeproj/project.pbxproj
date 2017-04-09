@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3976478C1E9A427C008588D1 /* frog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3976478B1E9A427C008588D1 /* frog@2x.png */; };
+		3976478F1E9A4440008588D1 /* bubble_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3976478D1E9A4440008588D1 /* bubble_right@2x.png */; };
+		397647901E9A4440008588D1 /* bubble_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3976478E1E9A4440008588D1 /* bubble_left@2x.png */; };
 		39EA82671E98F7E9007C0238 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82661E98F7E9007C0238 /* main.m */; };
 		39EA826A1E98F7E9007C0238 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82691E98F7E9007C0238 /* AppDelegate.m */; };
 		39EA82721E98F7E9007C0238 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39EA82711E98F7E9007C0238 /* Assets.xcassets */; };
@@ -55,6 +58,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3976478B1E9A427C008588D1 /* frog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frog@2x.png"; sourceTree = "<group>"; };
+		3976478D1E9A4440008588D1 /* bubble_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_right@2x.png"; sourceTree = "<group>"; };
+		3976478E1E9A4440008588D1 /* bubble_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_left@2x.png"; sourceTree = "<group>"; };
 		39EA82621E98F7E9007C0238 /* myTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39EA82661E98F7E9007C0238 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39EA82681E98F7E9007C0238 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -247,12 +253,15 @@
 		39EA82A71E98F841007C0238 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3976478B1E9A427C008588D1 /* frog@2x.png */,
+				3976478D1E9A4440008588D1 /* bubble_right@2x.png */,
+				3976478E1E9A4440008588D1 /* bubble_left@2x.png */,
 				39EA82D91E990EF0007C0238 /* ChatListController.h */,
 				39EA82DA1E990EF0007C0238 /* ChatListController.m */,
-				39EA82DC1E990F00007C0238 /* ChatViewController.h */,
-				39EA82DD1E990F00007C0238 /* ChatViewController.m */,
 				39EA82DF1E9914F4007C0238 /* ChatListCell.h */,
 				39EA82E01E9914F4007C0238 /* ChatListCell.m */,
+				39EA82DC1E990F00007C0238 /* ChatViewController.h */,
+				39EA82DD1E990F00007C0238 /* ChatViewController.m */,
 				39EA82E21E99D842007C0238 /* ChatViewCell.h */,
 				39EA82E31E99D842007C0238 /* ChatViewCell.m */,
 			);
@@ -348,7 +357,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				39EA82751E98F7E9007C0238 /* LaunchScreen.storyboard in Resources */,
+				3976478C1E9A427C008588D1 /* frog@2x.png in Resources */,
 				39EA82721E98F7E9007C0238 /* Assets.xcassets in Resources */,
+				397647901E9A4440008588D1 /* bubble_left@2x.png in Resources */,
+				3976478F1E9A4440008588D1 /* bubble_right@2x.png in Resources */,
 				39EA82811E98F803007C0238 /* RCConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

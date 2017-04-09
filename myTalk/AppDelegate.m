@@ -10,6 +10,16 @@
 
 #define RONG_APP_KEY @"y745wfm8443zv"
 
+#if TARGET_IPHONE_SIMULATOR
+
+#define RONG_TOKEN @"vvEQ0x0yR27wcnRQQFj4MhzW2SeFZ+o7/punDJxCX7yYIzjEZYQJU90QzH6sSb/dM/bUxrHzuMcQmJ6c+Dpfww=="
+
+#else
+
+#define RONG_TOKEN @"2npj0WxWgmh6r2CUnY3ddhzW2SeFZ+o7/punDJxCX7yYIzjEZYQJU13IZyhJLYyRkdOs3G1FA4cMhiXNxgUuyA=="
+
+#endif
+
 @interface AppDelegate ()<RCIMClientReceiveMessageDelegate>
 
 @end
@@ -18,14 +28,17 @@
 
 /*
  {"code":200,"userId":"jam","token":"vvEQ0x0yR27wcnRQQFj4MhzW2SeFZ+o7/punDJxCX7yYIzjEZYQJU90QzH6sSb/dM/bUxrHzuMcQmJ6c+Dpfww=="}
+ 
+ {"code":200,"userId":"zhu","token":"2npj0WxWgmh6r2CUnY3ddhzW2SeFZ+o7/punDJxCX7yYIzjEZYQJU13IZyhJLYyRkdOs3G1FA4cMhiXNxgUuyA=="}
  */
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
     [[RCIMClient sharedRCIMClient]initWithAppKey:RONG_APP_KEY];
-    [[RCIMClient sharedRCIMClient]connectWithToken:@"vvEQ0x0yR27wcnRQQFj4MhzW2SeFZ+o7/punDJxCX7yYIzjEZYQJU90QzH6sSb/dM/bUxrHzuMcQmJ6c+Dpfww==" success:^(NSString *userId) {
+    [[RCIMClient sharedRCIMClient]connectWithToken:RONG_TOKEN success:^(NSString *userId) {
         NSLog(@"connect success, userid:%@",userId);
+        [[RCIMClient sharedRCIMClient]setCurrentUserInfo:[[RCUserInfo alloc]initWithUserId:userId name:userId portrait:nil]];
     } error:^(RCConnectErrorCode status) {
         NSLog(@"connect error code:%d",(int)status);
     } tokenIncorrect:^{

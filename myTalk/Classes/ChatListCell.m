@@ -43,7 +43,7 @@
     }
     self.detailTextLabel.text=detail;
     
-    
+    self.imageView.image=[UIImage imageNamed:@"frog"];
 }
 
 @end

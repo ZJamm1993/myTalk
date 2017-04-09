@@ -18,6 +18,7 @@
     NSMutableArray* _dataSource;
     UIRefreshControl* _refreshControl;
     NSInteger _loadedCount;
+    NSString* _myUserId;
 }
 @end
 
@@ -26,16 +27,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title=self.targetId;
     self.automaticallyAdjustsScrollViewInsets=NO;
     self.view.backgroundColor=[UIColor whiteColor];
     
     _loadedCount=10;
     _dataSource=[NSMutableArray array];
+    _myUserId=[[RCIMClient sharedRCIMClient]currentUserInfo].userId;
     
     _tableView=[[UITableView alloc]init];
     _tableView.dataSource=self;
     _tableView.delegate=self;
-//    _tableView.contentInset=UIEdgeInsetsMake(64, 0, 44, 0);
+    _tableView.rowHeight=UITableViewAutomaticDimension;
+    _tableView.estimatedRowHeight=66;
+    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
     
     _inputTextField=[[UITextField alloc]init];
@@ -65,6 +70,7 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
     [self refreshMessages];
+    [self performSelector:@selector(tableViewScrollToBottom:) withObject:_tableView afterDelay:0];
 }
 
 -(void)refreshMoreMessages
@@ -81,10 +87,24 @@
         RCMessage* ms2=(RCMessage*)obj2;
         return ms1.sentTime>ms2.sentTime;
     }];
+    NSInteger oldRows=_dataSource.count;
     [_dataSource removeAllObjects];
     [_dataSource addObjectsFromArray:sortedMsgs];
+    NSInteger newRows=_dataSource.count;
     [_tableView reloadData];
     [_refreshControl endRefreshing];
+    if (newRows>oldRows) {
+        NSInteger stillRow=newRows-oldRows;
+        NSInteger sec=[_tableView numberOfSections];
+        if (sec>0) {
+            sec=sec-1;
+            NSInteger row=[_tableView numberOfRowsInSection:sec];
+            if (row>stillRow) {
+                NSIndexPath* indexPath=[NSIndexPath indexPathForRow:stillRow inSection:sec];
+                [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
+            }
+        }
+    }
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
@@ -158,7 +178,7 @@
         if (row>0) {
             row=row-1;
             NSIndexPath* indexPath=[NSIndexPath indexPathForRow:row inSection:sec];
-            [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+            [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
         }
     }
 }
@@ -182,6 +202,8 @@
         cell=[[ChatViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:idd];
     }
     RCMessage* msg=[_dataSource objectAtIndex:indexPath.row];
+    BOOL isRight=[msg.senderUserId isEqualToString:_myUserId];
+    cell.isRight=isRight;
     cell.message=msg;
     return cell;
 }
