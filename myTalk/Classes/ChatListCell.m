@@ -43,7 +43,16 @@
     }
     self.detailTextLabel.text=detail;
     
-    self.imageView.image=[UIImage imageNamed:@"frog"];
+    self.imageView.image=[self reSizeImage:[UIImage imageNamed:@"frog"] toSize:CGSizeMake(40, 40)];
+}
+
+- (UIImage *)reSizeImage:(UIImage *)image toSize:(CGSize)reSize
+{
+    UIGraphicsBeginImageContext(CGSizeMake(reSize.width, reSize.height));
+    [image drawInRect:CGRectMake(0, 0, reSize.width, reSize.height)];
+    UIImage *reSizeImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return reSizeImage;
 }
 
 @end

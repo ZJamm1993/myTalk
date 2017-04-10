@@ -10,6 +10,8 @@
 		3976478C1E9A427C008588D1 /* frog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3976478B1E9A427C008588D1 /* frog@2x.png */; };
 		3976478F1E9A4440008588D1 /* bubble_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3976478D1E9A4440008588D1 /* bubble_right@2x.png */; };
 		397647901E9A4440008588D1 /* bubble_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3976478E1E9A4440008588D1 /* bubble_left@2x.png */; };
+		397647931E9B6AF9008588D1 /* NSDate+StringFormater.m in Sources */ = {isa = PBXBuildFile; fileRef = 397647921E9B6AF9008588D1 /* NSDate+StringFormater.m */; };
+		397647961E9B6FB5008588D1 /* SystemMsgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 397647951E9B6FB5008588D1 /* SystemMsgCell.m */; };
 		39EA82671E98F7E9007C0238 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82661E98F7E9007C0238 /* main.m */; };
 		39EA826A1E98F7E9007C0238 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA82691E98F7E9007C0238 /* AppDelegate.m */; };
 		39EA82721E98F7E9007C0238 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39EA82711E98F7E9007C0238 /* Assets.xcassets */; };
@@ -61,6 +63,10 @@
 		3976478B1E9A427C008588D1 /* frog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frog@2x.png"; sourceTree = "<group>"; };
 		3976478D1E9A4440008588D1 /* bubble_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_right@2x.png"; sourceTree = "<group>"; };
 		3976478E1E9A4440008588D1 /* bubble_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_left@2x.png"; sourceTree = "<group>"; };
+		397647911E9B6AF9008588D1 /* NSDate+StringFormater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+StringFormater.h"; sourceTree = "<group>"; };
+		397647921E9B6AF9008588D1 /* NSDate+StringFormater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+StringFormater.m"; sourceTree = "<group>"; };
+		397647941E9B6FB5008588D1 /* SystemMsgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemMsgCell.h; sourceTree = "<group>"; };
+		397647951E9B6FB5008588D1 /* SystemMsgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemMsgCell.m; sourceTree = "<group>"; };
 		39EA82621E98F7E9007C0238 /* myTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39EA82661E98F7E9007C0238 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39EA82681E98F7E9007C0238 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -264,6 +270,10 @@
 				39EA82DD1E990F00007C0238 /* ChatViewController.m */,
 				39EA82E21E99D842007C0238 /* ChatViewCell.h */,
 				39EA82E31E99D842007C0238 /* ChatViewCell.m */,
+				397647911E9B6AF9008588D1 /* NSDate+StringFormater.h */,
+				397647921E9B6AF9008588D1 /* NSDate+StringFormater.m */,
+				397647941E9B6FB5008588D1 /* SystemMsgCell.h */,
+				397647951E9B6FB5008588D1 /* SystemMsgCell.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -376,6 +386,7 @@
 				39EA82A41E98F82C007C0238 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				39EA82A21E98F82C007C0238 /* MASViewConstraint.m in Sources */,
 				39EA82DE1E990F00007C0238 /* ChatViewController.m in Sources */,
+				397647961E9B6FB5008588D1 /* SystemMsgCell.m in Sources */,
 				39EA82E41E99D842007C0238 /* ChatViewCell.m in Sources */,
 				39EA829D1E98F82C007C0238 /* MASCompositeConstraint.m in Sources */,
 				39EA82A31E98F82C007C0238 /* NSArray+MASAdditions.m in Sources */,
@@ -387,6 +398,7 @@
 				39EA82A51E98F82C007C0238 /* View+MASAdditions.m in Sources */,
 				39EA82A11E98F82C007C0238 /* MASViewAttribute.m in Sources */,
 				39EA829E1E98F82C007C0238 /* MASConstraint.m in Sources */,
+				397647931E9B6AF9008588D1 /* NSDate+StringFormater.m in Sources */,
 				39EA829F1E98F82C007C0238 /* MASConstraintMaker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

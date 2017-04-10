@@ -16,7 +16,7 @@
 @interface ChatListController ()<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView* _tableView;
-    NSArray* _dataSource;
+    NSMutableArray* _dataSource;
     UIRefreshControl* _refreshControl;
 }
 @end
@@ -61,13 +61,13 @@
 
 - (void)refreshChatList
 {
-    _dataSource=[[RCIMClient sharedRCIMClient]getConversationList:[NSArray arrayWithObjects:
+    _dataSource=[NSMutableArray arrayWithArray:[[RCIMClient sharedRCIMClient]getConversationList:[NSArray arrayWithObjects:
                                                                    @(ConversationType_PRIVATE),
                                                                    @(ConversationType_DISCUSSION),
                                                                    @(ConversationType_GROUP),
                                                                    @(ConversationType_SYSTEM),
                                                                    @(ConversationType_APPSERVICE),
-                                                                @(ConversationType_PUBLICSERVICE),nil]];
+                                                                @(ConversationType_PUBLICSERVICE),nil]]];
     [_tableView reloadData];
     [_refreshControl endRefreshing];
 }
@@ -100,6 +100,25 @@
     chatView.targetId=conversation.targetId;
     chatView.conversationType=conversation.conversationType;
     [self.navigationController pushViewController:chatView animated:YES];
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle==UITableViewCellEditingStyleDelete) {
+        RCConversation* conversation=[_dataSource objectAtIndex:indexPath.row];
+        [_dataSource removeObject:conversation];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [[RCIMClient sharedRCIMClient]deleteMessages:conversation.conversationType targetId:conversation.targetId success:^{
+            
+        } error:^(RCErrorCode status) {
+            
+        }];
+    }
 }
 
 @end

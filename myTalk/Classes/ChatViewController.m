@@ -10,6 +10,8 @@
 #import "Masonry.h"
 #import "AppDelegate.h"
 #import "ChatViewCell.h"
+#import "SystemMsgCell.h"
+#import "NSDate+StringFormater.h"
 
 @interface ChatViewController ()<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -73,6 +75,12 @@
     [self performSelector:@selector(tableViewScrollToBottom:) withObject:_tableView afterDelay:0];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.view endEditing:YES];
+}
+
 -(void)refreshMoreMessages
 {
     _loadedCount=_loadedCount+10;
@@ -87,9 +95,29 @@
         RCMessage* ms2=(RCMessage*)obj2;
         return ms1.sentTime>ms2.sentTime;
     }];
+    
     NSInteger oldRows=_dataSource.count;
     [_dataSource removeAllObjects];
     [_dataSource addObjectsFromArray:sortedMsgs];
+    
+    //add time message;
+    NSTimeInterval smallTimeInterval=0;
+    int counter=0;
+    for (int i=0; i<_dataSource.count; i++) {
+        RCMessage* msg=[_dataSource objectAtIndex:i];
+        NSTimeInterval time=msg.sentTime/1000;
+        counter++;
+        if (time>=smallTimeInterval+120||counter>=3) {
+            smallTimeInterval=time;
+            RCMessage* timeMsg=[[RCMessage alloc]init];
+            timeMsg.objectName=SYS_MSG_ID;
+            timeMsg.extra=[[NSDate dateWithTimeIntervalSince1970:time]simpleDescription];
+            [_dataSource insertObject:timeMsg atIndex:i];
+            i++;
+            counter=0;
+        }
+    }
+    
     NSInteger newRows=_dataSource.count;
     [_tableView reloadData];
     [_refreshControl endRefreshing];
@@ -196,16 +224,29 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString* idd=@"ChatViewCell";
-    ChatViewCell* cell=[tableView dequeueReusableCellWithIdentifier:idd];
-    if (cell==nil) {
-        cell=[[ChatViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:idd];
-    }
+    
     RCMessage* msg=[_dataSource objectAtIndex:indexPath.row];
-    BOOL isRight=[msg.senderUserId isEqualToString:_myUserId];
-    cell.isRight=isRight;
-    cell.message=msg;
-    return cell;
+    if ([msg.objectName isEqualToString:SYS_MSG_ID]) {
+        NSString* idd=@"SystemMsgCell";
+        SystemMsgCell* cell=[tableView dequeueReusableCellWithIdentifier:idd];
+        if (cell==nil) {
+            cell=[[SystemMsgCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:idd];
+        }
+        cell.message=msg;
+        return cell;
+    }
+    else
+    {
+        NSString* idd=@"ChatViewCell";
+        ChatViewCell* cell=[tableView dequeueReusableCellWithIdentifier:idd];
+        if (cell==nil) {
+            cell=[[ChatViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:idd];
+        }
+        BOOL isRight=[msg.senderUserId isEqualToString:_myUserId];
+        cell.isRight=isRight;
+        cell.message=msg;
+        return cell;
+    }
 }
 
 @end
