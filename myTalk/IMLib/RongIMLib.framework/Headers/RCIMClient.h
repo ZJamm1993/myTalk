@@ -1027,7 +1027,7 @@ FOUNDATION_EXPORT NSString *const RCLibDispatchReadReceiptNotification;
  */
 - (void)sendReadReceiptResponse:(RCConversationType)conversationType
                        targetId:(NSString *)targetId
-                    messageList:(NSArray<RCMessage *> *)messageList
+                    messageList:(NSArray*)messageList
                         success:(void (^)())successBlock
                           error:(void (^)(RCErrorCode nErrorCode))errorBlock;
 
@@ -2127,7 +2127,7 @@ startCustomerService:(NSString *)kefuId
              onError:(void (^)(int errorCode, NSString *errMsg))errorBlock
           onModeType:(void (^)(RCCSModeType mode))modeTypeBlock
     onPullEvaluation:(void (^)(NSString *dialogId))pullEvaluationBlock
-       onSelectGroup:(void (^)(NSArray <RCCustomerServiceGroupItem*> *groupList))selectGroupBlock
+       onSelectGroup:(void (^)(NSArray *groupList))selectGroupBlock
               onQuit:(void (^)(NSString *quitMsg))quitBlock;
 
 
@@ -2253,7 +2253,7 @@ startCustomerService:(NSString *)kefuId
  
  @return 匹配的消息列表
  */
-- (NSArray <RCMessage *>*)searchMessages:(RCConversationType)conversationType
+- (NSArray *)searchMessages:(RCConversationType)conversationType
                                 targetId:(NSString *)targetId
                                  keyword:(NSString *)keyword
                                    count:(int)count
@@ -2271,9 +2271,9 @@ startCustomerService:(NSString *)kefuId
  @discussion 目前，SDK内置的文本消息、文件消息、图文消息支持搜索。
  自定义的消息必须要实现RCMessageContent的getSearchableWords接口才能进行搜索。
  */
-- (NSArray<RCSearchConversationResult *> *)searchConversations:
-                                               (NSArray<NSNumber *> *)conversationTypeList
-                                                   messageType:(NSArray<NSString *> *)objectNameList
+- (NSArray*)searchConversations:
+                                               (NSArray*)conversationTypeList
+                                                   messageType:(NSArray*)objectNameList
                                                        keyword:(NSString *)keyword;
 
 #pragma mark - 日志

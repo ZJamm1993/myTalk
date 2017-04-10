@@ -92,5 +92,5 @@
 /*!
  * 默认留言样式
  */
-@property(nonatomic, copy) NSArray<RCCSLeaveMessageItem *> *leaveMessageNativeInfo;
+@property(nonatomic, copy) NSArray *leaveMessageNativeInfo;
 @end

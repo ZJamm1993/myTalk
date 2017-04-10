@@ -89,6 +89,7 @@
     headImageView.image=[UIImage imageNamed:@"frog"];;
     nameLabel.text=name;
     contentLabel.text=detail;
+    self.isRight=self.isRight;
 }
 
 -(void)setIsRight:(BOOL)isRight
@@ -106,13 +107,13 @@
     [headImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
         
         make.width.height.equalTo(@(44));
+        make.top.equalTo(self.contentView).offset(10);
         if (isRight) {
-            make.top.equalTo(self.contentView).offset(10);
-            make.right.equalTo(self.contentView).offset(-10);
+            make.right.equalTo(self.contentView.mas_right).offset(-10);
         }
         else
         {
-            make.left.top.equalTo(self.contentView).offset(10);
+            make.left.equalTo(self.contentView.mas_left).offset(10);
         }
     }];
     
@@ -132,11 +133,12 @@
     
     [bubbleView mas_remakeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(nameLabel.mas_bottom).offset(10);
+        make.top.equalTo(nameLabel.mas_bottom).offset(5);
         make.bottom.equalTo(self.contentView.mas_bottom).offset(-10);
         if (isRight) {
             make.right.equalTo(nameLabel.mas_right);
             make.left.equalTo(contentLabel.mas_left).offset(-10);
+            
         }
         else
         {
@@ -144,7 +146,7 @@
             make.right.equalTo(contentLabel.mas_right).offset(10);
         }
     }];
-    
+
     [contentLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         
         make.width.lessThanOrEqualTo(@(160));

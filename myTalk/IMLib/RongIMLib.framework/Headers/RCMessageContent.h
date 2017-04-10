@@ -63,7 +63,7 @@
  
  @discussion 这里返回的关键内容列表将用于消息搜索，自定义消息必须要实现此接口才能进行搜索。
  */
-- (NSArray<NSString *> *)getSearchableWords;
+- (NSArray*)getSearchableWords;
 @end
 
 /*!

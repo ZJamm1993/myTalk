@@ -40,7 +40,7 @@
     _tableView=[[UITableView alloc]init];
     _tableView.dataSource=self;
     _tableView.delegate=self;
-    _tableView.rowHeight=UITableViewAutomaticDimension;
+//    _tableView.rowHeight=UITableViewAutomaticDimension;
     _tableView.estimatedRowHeight=66;
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
@@ -224,7 +224,6 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     RCMessage* msg=[_dataSource objectAtIndex:indexPath.row];
     if ([msg.objectName isEqualToString:SYS_MSG_ID]) {
         NSString* idd=@"SystemMsgCell";
@@ -247,6 +246,13 @@
         cell.message=msg;
         return cell;
     }
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell=[self tableView:tableView cellForRowAtIndexPath:indexPath];
+    return [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+//    return cell.contentView.frame.size.height;
 }
 
 @end
